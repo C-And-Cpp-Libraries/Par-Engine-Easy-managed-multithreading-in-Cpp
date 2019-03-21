@@ -4,8 +4,12 @@
 
 template class std::function<void(void)>;
 namespace Par {  
+  unsigned int GetCPUCount(){
+    return std::thread::hardware_concurrency();
+  }
+  
   // Constructors
-  Engine::Engine() : queuestarted(false), threadcount(4), workqueues() {}
+  Engine::Engine() : queuestarted(false), threadcount(GetCPUCount()), workqueues() {}
   Engine::Engine(size_t threads) : queuestarted(false), threadcount(threads), workqueues() {}
   
   // Make sure that queues are deleted

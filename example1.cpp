@@ -1,5 +1,4 @@
 #include "parengine.hpp"
-// #include <thread> // Optional: For system thread count
 #include <atomic>
 #include <iostream>
 
@@ -33,9 +32,9 @@ int main() {
   //  By default it will use 4 threads.
   //  If you already have "#include <thread>" in your project, you can get
   //  the system thread count with "std::thread::hardware_concurrency()".
-  // Par::Engine engine(); // This uses 4 threads.
-  // Par::Engine engine(std::thread::hardware_concurrency()); // System thread count
-  Par::Engine engine(8); // This uses 8 threads.
+  // Par::Engine engine(Par::GetCPUCount()); // System thread count again
+  // Par::Engine engine(8); // This uses 8 threads.
+  Par::Engine engine; // This uses system thread count by default.
   
   // We want to run addOne() and addCustom(2) 10 times, 
   // so we get enough for the doubleCounter().

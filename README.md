@@ -76,3 +76,6 @@ int main() {
 ```
 This uses 10 threads to run the `addThree` function a 100 times, and then it
 uses 10 threads to run the `doubleCounter` function 100 times.
+
+If Par::Engine is created without parameters it will automatically use the count of cpu cores in the system.
+You can also get amount of CPU cores with Par::GetCPUcount().

@@ -19,6 +19,8 @@
 
 
 namespace Par {  
+  unsigned int GetCPUCount();
+
   template <class T> class Queue {
   public:
     Queue() : qcount(4), qsize(0), active(0) { init(); }
