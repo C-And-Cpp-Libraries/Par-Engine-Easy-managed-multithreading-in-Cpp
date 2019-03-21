@@ -1,4 +1,4 @@
-# Par-Engine
+# Par::Engine
 Easy managed multithreading in C++! 
 # Installation
 Just drag `parengine.cpp` and `parengine.hpp` into your project, and compile them along with your other source.
